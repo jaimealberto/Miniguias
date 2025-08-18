@@ -1,17 +1,21 @@
 ---
 title: "Titulo"
 description: "Descripción"
-toc: true
-date: yyyy-dd-mm
 ---
 
-enlace imagen
+Imagenes
 
-{{< figure src="/img/nombre.jpg">}}
+![](img/avatar.png)
 
-## texto titulo
+Links 
+[Jaimealberto.io](https://jaimealberto.io)
+[Punto de fichero Underlines](#underlines)
+[Fichero externo](directorio/fichero)
 
+## H2
 
-{{< highlight zsh >}}
-Caja de codigo
-{{< /highlight >}}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+```bash
+caja de código
+```
