@@ -1,15 +1,11 @@
----
-title: "Plan backup nocturno"
-description: "Programación de backup apagado encendido automático"
----
+# "Plan backup nocturno"
+Programación de backup apagado encendido automático
 
 ## OpnSense
-
 Utilizar el cron para encender los hots necesarios y a las horas estimadas para la ejecución de los scripts correspondientes.
 
 ```bash
 crontab -e
-
 #minute hour    mday    month   wday    command
 45      00      *       *       *       (/usr/sbin/wake <interface> <mac>) > /dev/null
 ```

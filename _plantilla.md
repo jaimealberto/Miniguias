@@ -1,7 +1,5 @@
----
-title: "Titulo"
-description: "Descripción"
----
+# "Titulo"
+Breve descripción del objetivo.
 
 Imagenes
 
