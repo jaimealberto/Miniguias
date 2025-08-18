@@ -1,4 +1,4 @@
-# "Plan backup nocturno"
+# Plan backup nocturno
 Programación de backup apagado encendido automático
 
 ## OpnSense
