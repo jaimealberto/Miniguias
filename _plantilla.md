@@ -1,4 +1,4 @@
-# "Titulo"
+# Titulo
 Breve descripción del objetivo.
 
 Imagenes
