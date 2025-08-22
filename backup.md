@@ -1,13 +1,16 @@
 # Plan backup nocturno
 Programación de backup apagado encendido automático
-
-## OpnSense
+## ~~OpnSense~~ Host de la red
 Utilizar el cron para encender los hots necesarios y a las horas estimadas para la ejecución de los scripts correspondientes.
+
+**Nota** Se descarta el uso de OpnSense dado los problemas con la persistencia del cron.
 
 ```bash
 crontab -e
 #minute hour    mday    month   wday    command
 45      00      *       *       *       (/usr/sbin/wake <interface> <mac>) > /dev/null
+# m h  dom mon dow   command
+#*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1
 ```
 
 ## Host de trabajo
