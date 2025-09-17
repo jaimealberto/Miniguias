@@ -57,3 +57,9 @@ OOBE\BYPASSNRO
 ## Guia gráfica
 
 ![](img/updateW11.png)
+
+
+## Links relacionados:
+[Microsoft](https://www.microsoft.com/es-es/software-download/windows11?)
+[Rufus]https://rufus.ie/es/
+
