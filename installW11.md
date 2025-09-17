@@ -60,6 +60,6 @@ OOBE\BYPASSNRO
 
 
 ## Links relacionados:
-[Microsoft](https://www.microsoft.com/es-es/software-download/windows11?)
-[Rufus](https://rufus.ie/es/)
+- [Microsoft](https://www.microsoft.com/es-es/software-download/windows11?)
+- [Rufus](https://rufus.ie/es/)
 
