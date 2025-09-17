@@ -1,5 +1,5 @@
 # Instalación Windows 11
-Notas sobre la instalación o actualización a Windows 11 en equipos no compatibles según Microsoft.
+Notas sobre la instalación de Windows 11 en equipos no compatibles según Microsoft.
 
 ## **🖥️ 1. Configurar BIOS**
 | Paso | Acción          | Detalles                                                          |
