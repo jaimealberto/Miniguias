@@ -1,6 +1,4 @@
-Para apagar tu Linux automáticamente a diferentes horas según el día de la semana, lo más sencillo es usar **cron**.
-
----
+Apagar Linux automáticamente a diferentes horas según el día de la semana
 
 # ✅ **1. Editar el cron del sistema**
 
