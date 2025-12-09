@@ -95,10 +95,10 @@ URLS = [
     {"url": "https://threatmap.checkpoint.com"""}
 ]
 
-PROFILE_DIR = "/home/world/world-profile"
+PROFILE_DIR = "/home/monitor/monitor-profile"
 os.makedirs(PROFILE_DIR, exist_ok=True)
 
-LOG_FILE = "/home/world/monitor.log"
+LOG_FILE = "/home/monitor/monitor.log"
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s [%(levelname)s] %(message)s')
 
@@ -234,7 +234,7 @@ vi /home/monitor/.config/autostart/monitor.desktop
 ``` ini
 [Desktop Entry]
 Type=Application
-Exec=bash -c 'source /home/monitor/venv/bin/activate && python /home/world/monitor.py'
+Exec=bash -c 'source /home/monitor/venv/bin/activate && python /home/monitor/monitor.py'
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
