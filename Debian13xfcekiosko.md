@@ -30,8 +30,7 @@ Como root:
 ```
 
 ## ✅ 4. Configurar la red, ip fija
-Esto lo podemos hacer desde el entorno gráfico o bien via ssh:
-Como root, ejemplo:
+Esto lo podemos hacer desde el entorno gráfico o bien via ssh, como root, ejemplo:
 ```bash
 cat /etc/NetworkManager/system-connections/Wired\ connection\ 1 
 [connection]
@@ -62,7 +61,7 @@ Editar como root:
 vi /etc/lightdm/lightdm.conf
 ```
 
-Descomenta/añade:
+Descomentar/añadir:
 ```
 [Seat:*]
 autologin-user=monitor
@@ -184,25 +183,25 @@ while True:
 ```
 En Debian 13 debido a la política **PEP 668** **no puedes instalar paquetes globalmente con pip**. La manera correcta de utilizar el script anteior es **usar un entorno virtual o `pipx`**. Ahora vamos a dar los pasos previos para preparar todo, para el usuario `monitor`.
 
-**1️⃣ Instalar paquetes necesarios del sistema**
-Como root:
+**1️⃣ Instalar paquetes necesarios del sistema**, como root:
 ```bash
 apt update
 apt install python3-full python3-venv chromium chromium-driver -y
 ```
-**2️⃣ Crear un entorno virtual para el usuario monitor**
-Como el usuario minitor:
+**2️⃣ Crear un entorno virtual para el usuario monitor**, como el usuario minitor:
 ```bash
 cd /home/monitor
 python3 -m venv venv
 ```
 * Esto crea un directorio `venv` dentro de `/home/kiosko`.
+
 **3️⃣ Activar el entorno virtual**
 
 ```bash
 source /home/monitor/venv/bin/activate
 ```
 Ahora el prompt debería mostrar `(venv)`.
+
 **4️⃣ Instalar Selenium dentro del entorno virtual**
 
 Dentro del entorno virtual **no hay restricciones de PEP 668**, así que:
