@@ -193,7 +193,7 @@ apt install python3-full python3-venv chromium chromium-driver -y
 cd /home/monitor
 python3 -m venv venv
 ```
-* Esto crea un directorio `venv` dentro de `/home/kiosko`.
+* Esto crea un directorio `venv` dentro de `/home/monitor`.
 
 **3️⃣ Activar el entorno virtual**
 
@@ -211,11 +211,13 @@ pip install --upgrade pip
 pip install selenium
 ```
 * Esto instalará Selenium solo dentro del entorno virtual, sin tocar Python del sistema.
+
 **5️⃣ Probar Selenium**
 ```bash
 python -c "import selenium; print(selenium.__version__)"
 ```
 Deberías ver la versión instalada, confirmando que Selenium funciona.
+
 **6️⃣ Ejecutar tu script de kiosko**
 ```bash
 python /home/monitor/monitor.py
