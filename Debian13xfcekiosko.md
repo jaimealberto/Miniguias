@@ -12,7 +12,7 @@ Equipo que muestre cuadros de mando en uno o varios monitores con arranque autom
  
 ## ✅ 2. Instalar los paquetes mínimos necesarios para modo kiosko, video world
 ```bash
-
+apt install python3-full python3-venv chromium chromium-driver -y
 ```
 
 ## ✅ 3. Crear un usuario dedicado al video world
