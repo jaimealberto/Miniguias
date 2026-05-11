@@ -1,19 +1,22 @@
-# Titulo
-Breve descripción del objetivo.
+# Título
+Qué resuelve esta guía en una frase.
 
-Imagenes
+## Prerrequisitos
+- ...
 
-![](img/avatar.png)
-
-Links 
-[Jaimealberto.io](https://jaimealberto.io)
-[Punto de fichero Underlines](#underlines)
-[Fichero externo](directorio/fichero)
-
-## H2
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+## ✅ 1. Primer paso
+Descripción.
 
 ```bash
-caja de código
+comando
 ```
+
+## ✅ 2. Segundo paso
+Descripción.
+
+```bash
+comando
+```
+
+## Referencias
+- [Texto](url)
