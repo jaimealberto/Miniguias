@@ -1,5 +1,10 @@
-# Debian 13 + XFCE, modo kiosko, video world.
+# Debian 13 + XFCE, modo kiosko, video world
 Equipo que muestre cuadros de mando en uno o varios monitores con arranque automático.
+
+## Prerrequisitos
+- ISO **netinst** de Debian 13 (Trixie)
+- USB booteable ≥ 4 GB
+- Acceso físico al equipo
 
 ## ✅ 1. Instalación de Debian 13 + XFCE mínimo
 

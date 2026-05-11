@@ -1,67 +1,64 @@
 # Syncthing
-Operativa después de instalación y configuración como servicio.
+Puesta en marcha de Syncthing tras la instalación: acceso web y configuración como servicio systemd.
 
-## Configuración
+## Prerrequisitos
+- Syncthing instalado según la distribución
 
-Después de instalarlo como requiera cada distribución.
+## ✅ 1. Arrancar y configurar Syncthing
 
+Después de instalarlo, arranca el servicio con el icono que aparecerá en el entorno gráfico.
 
-- Arrancamos el servicio con el icono que aparecerá.
-- Si no disponemos de entorno gráfico, desde un terminal
+Si no dispones de entorno gráfico, desde un terminal:
 ```bash
-sudo systemctl --user sart syncthing@$nomredeusuario.service
+sudo systemctl --user start syncthing@$USER.service
 ```
-Accedemos localmente y configuramos o si no tenemos entorno gráfico vamos al home del usuario donde tendremos el fichero de configuración, cat .config/syncthing/config.xml
 
-le damos acceso remoto modificando la siguiente liena:
-```bash
+Accede a la interfaz web en [https://localhost:8384/](https://localhost:8384/).
+
+Si no tienes entorno gráfico, edita el fichero de configuración directamente:
+```
+~/.config/syncthing/config.xml
+```
+
+Para dar acceso remoto, modifica la siguiente línea:
+```xml
 <gui enabled="true" tls="true" debugging="false">
-        <address>localhost:8384</address>
-        <user>admin</user>
-        <password>$2a$10$j/1R3cpquK4WUrcWuQ.z3Oj.QTHIH.8qtzn0IReuRydWeCDrV1BC6</password>
-        <apikey>davGbU6b42AnmXUt39U6aNgAeig5xJtL</apikey>
-        <theme>default</theme>
+    <address>localhost:8384</address>
 ```
-Donde se indica localhost:8384 le indicamos una ip accesible del host y el puerto que queramos si no queremos dejar el de defecto.
-
-https://localhost:8384/
+Sustituye `localhost` por una IP accesible del host y cambia el puerto si lo deseas.
 
 ![](img/syncthing00.png)
 ![](img/syncthing01.png)
 
+## ✅ 2. Configurar el servicio systemd
 
-
-## Fichero de arranque del servicio
-
-/etc/systemd/system/syncthing.service
-
-```bash
-     [Unit]
-     Description=Syncthing - Open Source Continuous File Synchronization for %I
-     Documentation=man:syncthing(1)
-     After=network.target
-
-     [Service]
-     User=<usuario que lo ejecutara>
-     ExecStart=/usr/bin/syncthing -no-browser -no-restart
-     Restart=on-failure
-     RestartSec=5
-     
-     [Install]
-     WantedBy=default.target
-
+Crea o edita `/etc/systemd/system/syncthing.service`:
 ```
-El servicio se gestionara según necesidades ( servidor, portátil,sobremesa,etc)
+[Unit]
+Description=Syncthing - Open Source Continuous File Synchronization for %I
+Documentation=man:syncthing(1)
+After=network.target
 
+[Service]
+User=<usuario que lo ejecutará>
+ExecStart=/usr/bin/syncthing -no-browser -no-restart
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+```
+
+Gestión del servicio:
 ```bash
-# Arrancar el servicio
+# Arrancar
 sudo systemctl start syncthing.service
-# Estado del servicio
+# Estado
 sudo systemctl status syncthing.service
-# Parar el servicio
+# Parar
 sudo systemctl stop syncthing.service
-# Habilitar el servicio al arranque, si es necesario no se recomienda en portátiles
+# Habilitar al arranque (no recomendado en portátiles)
 sudo systemctl enable syncthing.service
-# Deshabilitar el servicio al arranque, si es necesario no se recomienda en portátiles
+# Deshabilitar al arranque
 sudo systemctl disable syncthing.service
 ```
